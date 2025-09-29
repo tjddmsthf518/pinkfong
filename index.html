@@ -4,6 +4,192 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pinkfong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var swiper = new Swiper(".con_wrap_3", {
+          effect: "creative",
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          slidesPerGroupSkip: 0,
+          grabCursor: true,
+          creativeEffect: {
+            prev: {
+              translate: ["-105%", 0, 0],
+              rotate: [0, 0, 0],
+            },
+            next: {
+              translate: ["100.5%", 0, 0],
+              rotate: [0, 0, 0],
+            },
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      });
+    </script>
   </head>
-  <body></body>
+  <body>
+    <div class="wrap">
+      <header>
+        <ul class="menu_wrap_left">
+          <li><a href="#">핑크퐁 소개</a></li>
+          <li><a href="#">사업 소개</a></li>
+          <li><a href="#">제휴문의</a></li>
+        </ul>
+
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/header/pinkfong_logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <ul class="menu_wrap_right">
+          <li><a href="#">스토어</a></li>
+          <li>
+            <a href="#">핑크퐁 <span>+</span></a>
+          </li>
+          <li class="lan">
+            <a href="#">
+              <img src="img/header/icon_earth.png" alt="earth" />
+              한국어
+              <img src="img/header/lan_arrow.png" alt="lan_arrow" />
+            </a>
+          </li>
+        </ul>
+      </header>
+      <!-- header end -->
+
+      <section class="section_1">
+        <h3>
+          내 아이의 첫 시작, <br />
+          핑크퐁과 함께해요!
+        </h3>
+
+        <img src="img/section_1/pinkfong.png" alt="pinkfong" />
+
+        <div class="bg_1"></div>
+      </section>
+      <!-- section_1 end -->
+
+      <section class="section_2">
+        <h3><span>핑크퐁</span> 친구들</h3>
+
+        <div class="container_2">
+          <div class="con_wrap_2">
+            <div class="con_2 con_2_1">
+              <img src="img/section_2/img.png" alt="pinkfong_img" />
+            </div>
+
+            <div class="con_2">
+              <a href="#">
+                <img src="img/section_2/pinkfong_img.png" alt="pinkfong" />
+                <h4 class="con_title_2_1">핑크퐁</h4>
+              </a>
+            </div>
+
+            <div class="con_2">
+              <a href="#">
+                <img
+                  src="img/section_2/babyshark_img.png"
+                  alt="babyshark_img"
+                />
+                <h4 class="con_title_2_2">아기상어</h4>
+              </a>
+            </div>
+          </div>
+
+          <div class="con_wrap_2">
+            <div class="con_2">
+              <a href="#">
+                <img src="img/section_2/bebe_img.png" alt="bebe_img" />
+                <h4 class="con_title_2_3">베베핀</h4>
+              </a>
+            </div>
+
+            <div class="con_2">
+              <a href="#">
+                <img src="img/section_2/hogi_img.png" alt="hogi_img" />
+                <h4 class="con_title_2_4">호기와 친구들</h4>
+              </a>
+            </div>
+
+            <div class="con_2">
+              <a href="#">
+                <img src="img/section_2/ninimo_img.png" alt="ninimo_img" />
+                <h4 class="con_title_2_5">니니모</h4>
+              </a>
+            </div>
+
+            <div class="con_2 con_2_2">
+              <h4>
+                아이의 인기 캐릭터, <br />
+                스토어에서 만나보세요!
+              </h4>
+
+              <div class="btn_2">
+                <a href="#">바로가기 ⇀</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section_2 end -->
+
+      <section class="section_3">
+        <div class="swiper con_wrap_3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/section_3/bg_1_1.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/section_3/bg_1_2.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/section_3/bg_2_1.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/section_3/bg_2_2.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/section_3/bg_3_1.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/section_3/bg_3_2.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/section_3/bg_4_1.png" />
+            </div>
+            <div class="swiper-slide">
+              <img src="img/section_3/bg_4_2.png" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+      <!-- section_3 end -->
+
+      <section class="section_4">
+        <h3><span>핑크퐁</span> 플레이리스트</h3>
+
+        <div class="video_wrap"></div>
+      </section>
+    </div>
+  </body>
 </html>
