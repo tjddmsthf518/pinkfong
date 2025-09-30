@@ -178,6 +178,7 @@ header a {
 
 @media screen and (max-width: 1250px) {
   .section_1 h3 {
+    top: 60%;
     left: 50px;
     font-size: 48px;
     line-height: 58px;
@@ -190,9 +191,13 @@ header a {
 }
 
 @media screen and (max-width: 1050px) {
+  .section_1{
+    height: 59vh;
+  }
+
   .section_1 h3 {
     font-size: 24px;
-    top: 40%;
+    top: 53%;
     left: 50%;
     transform: translateX(-50%);
     line-height: 30px;
@@ -202,6 +207,11 @@ header a {
   .section_1 img {
     width: 250px;
     margin-left: -125px;
+    top: 15%;
+  }
+
+  .bg_1{
+    height: 59vh;
   }
 }
 /* section_1 end */
@@ -249,6 +259,7 @@ header a {
 .con_2_1 {
   width: 700px;
   border: none;
+  overflow: hidden;
 }
 
 .con_2 h4 {
@@ -289,6 +300,7 @@ header a {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
+  font-size: 24px;
   text-align: center;
   line-height: 40px;
   color: #ff66ae;
@@ -314,6 +326,30 @@ header a {
   color: white;
   margin-top: 3px;
 }
+
+@media screen and (max-width: 1465px) {
+  .section_2 {
+    padding: 150px 100px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .section_2{
+    padding: 100px 40px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .section_2{
+    padding: 80px 20px;
+  }
+
+  .section_2 h3{
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+/* section_2 end */
 
 .section_3 {
   padding: 0 250px;
