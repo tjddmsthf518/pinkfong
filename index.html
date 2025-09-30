@@ -12,6 +12,13 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -20,6 +27,43 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
       $(document).ready(function () {
+        $(window).scroll(function () {
+          var pageY = $(window).scrollTop();
+          var sec_1_top = $(".section_1").offset().top;
+
+          if (pageY > 100) {
+            $("header").css({
+              position: "fixed",
+              top: 0,
+              left: 0,
+              backgroundColor: "white",
+            });
+
+            $("header a").css({
+              color: "#1d1d1d",
+            });
+
+            $(".lan i").css({
+              color: "#1d1d1d",
+            });
+          } else if (pageY < 100) {
+            $("header").css({
+              position: "absolute",
+              top: 0,
+              left: 0,
+              backgroundColor: "unset",
+            });
+
+            $("header a").css({
+              color: "white",
+            });
+
+            $(".lan i").css({
+              color: "white",
+            });
+          }
+        });
+
         var swiper = new Swiper(".con_wrap_3", {
           effect: "creative",
           slidesPerView: 2,
@@ -66,9 +110,9 @@
           </li>
           <li class="lan">
             <a href="#">
-              <img src="img/header/icon_earth.png" alt="earth" />
+              <i class="fa-solid fa-globe"></i>
               한국어
-              <img src="img/header/lan_arrow.png" alt="lan_arrow" />
+              <i class="fa-solid fa-caret-down"></i>
             </a>
           </li>
         </ul>
