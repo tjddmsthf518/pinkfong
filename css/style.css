@@ -8,10 +8,13 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
+}
+
+.header_inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
 }
 
 header a {
@@ -29,6 +32,18 @@ header a {
   margin-right: 90px;
 }
 
+.menu_wrap_left li:last-child {
+  margin-right: 0;
+}
+
+.menu_bar {
+  display: none;
+}
+
+.logo {
+  width: 244px;
+}
+
 .menu_wrap_right {
   display: flex;
   align-items: center;
@@ -38,8 +53,13 @@ header a {
   margin-left: 90px;
 }
 
+.menu_wrap_right li:first-child {
+  margin-left: 0;
+}
+
 .menu_wrap_right span {
   color: #ff41a1;
+  font-size: 22px;
 }
 
 .lan a {
@@ -54,6 +74,58 @@ header a {
 .lan i {
   font-size: 14px;
   color: white;
+}
+
+.mo_lan {
+  display: none;
+}
+
+.mo_lan a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mo_lan i {
+  font-size: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 1548px) {
+  header {
+    padding: 10px 100px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  header {
+    padding: 10px 40px;
+  }
+
+  .logo {
+    width: 162px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .menu_wrap_left,
+  .menu_wrap_right {
+    display: none;
+  }
+
+  .menu_bar {
+    display: block;
+  }
+
+  .mo_lan {
+    display: block;
+  }
 }
 /* header end */
 
@@ -71,13 +143,15 @@ header a {
   letter-spacing: -1px;
   line-height: 80px;
   color: white;
+  z-index: 10;
 }
 
 .section_1 img {
   width: 700px;
   position: absolute;
   top: 15%;
-  left: 33%;
+  left: 50%;
+  margin-left: -350px;
   animation-name: pinkfong;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
@@ -99,6 +173,36 @@ header a {
   width: 100%;
   height: 100vh;
   background: url(../img/section_1/bg_1.png) no-repeat center / cover;
+  background-position-x: 100%;
+}
+
+@media screen and (max-width: 1250px) {
+  .section_1 h3 {
+    left: 50px;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .section_1 img {
+    width: 450px;
+    margin-left: -225px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .section_1 h3 {
+    font-size: 24px;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .section_1 img {
+    width: 250px;
+    margin-left: -125px;
+  }
 }
 /* section_1 end */
 
