@@ -21,12 +21,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
       $(document).ready(function () {
+        $(".menu_bar").click(function () {
+          $(".sub_menu_wrap").addClass("active");
+        });
+
+        $(".close").click(function () {
+          $(".sub_menu_wrap").removeClass("active");
+        });
+
         $(window).scroll(function () {
           var pageY = $(window).scrollTop();
           var sec_1_top = $(".section_1").offset().top;
@@ -39,11 +48,23 @@
               backgroundColor: "white",
             });
 
-            $("header a").css({
+            $(".menu_wrap_left a, .menu_wrap_right a").css({
+              color: "#1d1d1d",
+            });
+
+            $(".mo_lan a").css({
               color: "#1d1d1d",
             });
 
             $(".lan i").css({
+              color: "#1d1d1d",
+            });
+
+            $(".mo_lan i").css({
+              color: "#1d1d1d",
+            });
+
+            $(".menu_bar i").css({
               color: "#1d1d1d",
             });
           } else if (pageY < 100) {
@@ -54,11 +75,23 @@
               backgroundColor: "unset",
             });
 
-            $("header a").css({
+            $(".menu_wrap_left a, .menu_wrap_right a").css({
+              color: "white",
+            });
+
+            $(".mo_lan a").css({
               color: "white",
             });
 
             $(".lan i").css({
+              color: "white",
+            });
+
+            $(".mo_lan i").css({
+              color: "white",
+            });
+
+            $(".menu_bar i").css({
               color: "white",
             });
           }
@@ -99,8 +132,50 @@
           </ul>
 
           <div class="menu_bar">
-            <img src="img/header/menu_bar.png" alt="menu_bar" />
+            <i class="fa-solid fa-bars"></i>
           </div>
+
+          <nav class="sub_menu_wrap">
+            <ul class="sub_menu">
+              <li><a href="#">핑크퐁 소개</a></li>
+              <li><a href="#">사업 소개</a></li>
+              <li><a href="#">제휴문의</a></li>
+              <li><a href="#">스토어</a></li>
+              <li>
+                <a href="#">핑크퐁 <span>+</span></a>
+              </li>
+            </ul>
+
+            <div class="close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div class="sub_sns_wrap">
+              <div class="youtube">
+                <a href="https://www.youtube.com/PinkfongKO">
+                  <img src="img/footer/youtube.png" alt="youtube" />
+                </a>
+              </div>
+
+              <div class="instagram">
+                <a href="https://www.instagram.com/pinkfong.ko/#">
+                  <img src="img/footer/insta.png" alt="insta" />
+                </a>
+              </div>
+
+              <div class="facebook">
+                <a href="https://www.facebook.com/pinkfong.ko">
+                  <img src="img/footer/facebook.png" alt="facebook" />
+                </a>
+              </div>
+
+              <div class="blog">
+                <a href="https://blog.naver.com/ss_app">
+                  <img src="img/footer/blog.png" alt="blog" />
+                </a>
+              </div>
+            </div>
+          </nav>
 
           <div class="logo">
             <a href="index.html">
@@ -134,7 +209,7 @@
       <!-- header end -->
 
       <section class="section_1">
-        <h3>
+        <h3 data-aos="fade-up" data-aos-duration="1000">
           내 아이의 첫 시작, <br />
           핑크퐁과 함께해요!
         </h3>
@@ -146,10 +221,17 @@
       <!-- section_1 end -->
 
       <section class="section_2">
-        <h3><span>핑크퐁</span> 친구들</h3>
+        <h3 data-aos="fade-up" data-aos-duration="1000">
+          <span>핑크퐁</span> 친구들
+        </h3>
 
         <div class="container_2">
-          <div class="con_wrap_2">
+          <div
+            class="con_wrap_2"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
             <div class="con_2 con_2_1">
               <img src="img/section_2/img.png" alt="pinkfong_img" />
             </div>
@@ -172,7 +254,12 @@
             </div>
           </div>
 
-          <div class="con_wrap_2">
+          <div
+            class="con_wrap_2"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
             <div class="con_2">
               <a href="#">
                 <img src="img/section_2/bebe_img.png" alt="bebe_img" />
@@ -209,19 +296,34 @@
         <!-- pc -->
 
         <div class="mo_container_2">
-          <div class="mo_con_2 img_box_2">
+          <div
+            class="mo_con_2 img_box_2"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
             <img src="img/section_2/img.png" alt="pinkfong_img" />
           </div>
 
           <div class="mo_con_wrap_2">
-            <div class="mo_con_2">
+            <div
+              class="mo_con_2"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
               <a href="#">
                 <img src="img/section_2/pinkfong_img.png" alt="pinkfong" />
                 <h4 class="con_title_2_1">핑크퐁</h4>
               </a>
             </div>
 
-            <div class="mo_con_2">
+            <div
+              class="mo_con_2"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
               <a href="#">
                 <img
                   src="img/section_2/babyshark_img.png"
@@ -231,28 +333,48 @@
               </a>
             </div>
 
-            <div class="mo_con_2">
+            <div
+              class="mo_con_2"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="400"
+            >
               <a href="#">
                 <img src="img/section_2/bebe_img.png" alt="bebe_img" />
                 <h4 class="con_title_2_3">베베핀</h4>
               </a>
             </div>
 
-            <div class="mo_con_2">
+            <div
+              class="mo_con_2"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
               <a href="#">
                 <img src="img/section_2/hogi_img.png" alt="hogi_img" />
                 <h4 class="con_title_2_4">호기와 친구들</h4>
               </a>
             </div>
 
-            <div class="mo_con_2">
+            <div
+              class="mo_con_2"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+            >
               <a href="#">
                 <img src="img/section_2/ninimo_img.png" alt="ninimo_img" />
                 <h4 class="con_title_2_5">니니모</h4>
               </a>
             </div>
 
-            <div class="mo_con_2 con_2_2">
+            <div
+              class="mo_con_2 con_2_2"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="700"
+            >
               <h4>
                 아이의 인기 캐릭터, <br />
                 스토어에서 만나보세요!
@@ -303,10 +425,17 @@
       <!-- section_3 end -->
 
       <section class="section_4">
-        <h3><span>핑크퐁</span> 플레이리스트</h3>
+        <h3 data-aos="fade-up" data-aos-duration="1000">
+          <span>핑크퐁</span> 플레이리스트
+        </h3>
 
         <div class="video_wrap">
-          <div class="video_left">
+          <div
+            class="video_left"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
             <a
               href="https://www.youtube.com/shorts/gIFqka3k3io?feature=share"
               target="_blank"
@@ -316,25 +445,45 @@
           </div>
 
           <div class="video_right">
-            <div class="con_4 video_4_2">
+            <div
+              class="con_4 video_4_2"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
               <a href="https://youtu.be/761ae_KDg_Q" target="_blank">
                 <img src="img/section_4/video_4_2.png" alt="video_4_2" />
               </a>
             </div>
 
-            <div class="con_4 video_4_3">
+            <div
+              class="con_4 video_4_3"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
               <a href="https://youtu.be/ouweE3r0Ic0" target="_blank">
                 <img src="img/section_4/video_4_3.png" alt="video_4_3" />
               </a>
             </div>
 
-            <div class="con_4 video_4_4">
+            <div
+              class="con_4 video_4_4"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="350"
+            >
               <a href="https://youtu.be/HPfedLwd_7w" target="_blank">
                 <img src="img/section_4/video_4_4.png" alt="video_4_4" />
               </a>
             </div>
 
-            <div class="con_4 video_4_5">
+            <div
+              class="con_4 video_4_5"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="450"
+            >
               <a
                 href="https://youtu.be/Z-20w7NyT0s?list=RDZ-20w7NyT0s"
                 target="_blank"
@@ -348,11 +497,7 @@
       <!-- section_4 end -->
 
       <footer>
-        <div class="footer_bg_wrap">
-          <div class="ocean_bg">
-            <img src="img/footer/ocean_bg.png" alt="ocean_bg" />
-          </div>
-
+        <div class="ocean_bg_wrap">
           <div class="babyshark_family">
             <img src="img/footer/shark_family 1.png" alt="babyshark_family" />
           </div>
@@ -360,24 +505,26 @@
           <div class="footer_title">
             <img src="img/footer/pinkfong.png" alt="pinkfong" />
           </div>
-        </div>
 
-        <div class="info">
-          <div class="news">
-            <a href="#">뉴스레터    |</a>
+          <div class="ocean_bg"></div>
+
+          <div class="info">
+            <div class="news">
+              <a href="#">뉴스레터    |</a>
+            </div>
+
+            <div class="coalition">
+              <a href="#">    제휴 문의    |</a>
+            </div>
+
+            <div class="company">
+              <a href="#">    더핑크퐁컴퍼니</a>
+            </div>
           </div>
 
-          <div class="coalition">
-            <a href="#">    제휴 문의    |</a>
+          <div class="copylight">
+            ⓒ The Pinkfong Company. All Rights Reserved.
           </div>
-
-          <div class="company">
-            <a href="#">    더핑크퐁컴퍼니</a>
-          </div>
-        </div>
-
-        <div class="copylight">
-          ⓒ The Pinkfong Company. All Rights Reserved.
         </div>
 
         <div class="sns_wrap">
@@ -407,5 +554,10 @@
         </div>
       </footer>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
