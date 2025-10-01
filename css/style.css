@@ -274,7 +274,7 @@ header a {
 
 @media screen and (max-width: 1050px) {
   .section_1 {
-    height: 59vh;
+    height: 610px;
   }
 
   .section_1 h3 {
@@ -289,11 +289,11 @@ header a {
   .section_1 img {
     width: 250px;
     margin-left: -125px;
-    top: 10%;
+    top: 13%;
   }
 
   .bg_1 {
-    height: 59vh;
+    height: 100%;
   }
 }
 /* section_1 end */
